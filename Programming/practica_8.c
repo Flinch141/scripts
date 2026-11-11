@@ -178,8 +178,12 @@ int victory(int size, int **a){
         }
     }
 
-    if(k = 1) return 1;
-    else return 0;
+    if(k == 0){ 
+        return 1;}
+
+    else{ 
+        return 0;
+    }
     
 }
 int main(){
@@ -211,8 +215,8 @@ int main(){
 
     while(cmd != 'e' &&  !game_over(size,a)){
 
-        if(victory(size,a)){
-            printf('You won');
+        if(victory(size,a) == 0){
+            printf("You won");
         }
 
         scanf(" %c",&cmd);
